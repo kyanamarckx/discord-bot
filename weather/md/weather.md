@@ -7,6 +7,7 @@
   1. dagen uitgedrukt
   2. uren uitgedrukt (elk uur nieuwe lijn)
 - Er is ook de mogelijkheid om data te verkrijgen van het weer op deze moment alleen
+  1. er is ook keuze voor een forecast van de komende 7 dagen of komende 24u, ipv 15 dagen (link aanpassen)
 
 ## Ideas
 - Leuk idee kan zijn om ook, wanneer gewenst, een melding te sturen ivm de UV-index zoals hoge UV-index: goed om te zonnen maar genoeg insmeren, ...
