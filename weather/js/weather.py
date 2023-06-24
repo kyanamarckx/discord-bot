@@ -14,7 +14,7 @@ if response.status_code!=200:
 jsonData = response.json()
 
 # save the results to a file
-with open('weather.json', 'w') as outfile:
+with open('C:\Users\kyana\OneDrive - Hogeschool Gent\Documenten\GitHub\weather\weather\data\weather.json', 'w') as outfile:
     json.dump(jsonData, outfile)
     
      

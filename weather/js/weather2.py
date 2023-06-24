@@ -16,7 +16,7 @@ if response.status_code!=200:
 CSVText = csv.reader(response.text.splitlines(), delimiter=',',quotechar='"')
         
 # save the results to a file
-with codecs.open('weather2.csv', 'w', encoding='utf8') as outfile:
+with codecs.open('C:\Users\kyana\OneDrive - Hogeschool Gent\Documenten\GitHub\weather\weather\data\weather2.csv', 'w', encoding='utf8') as outfile:
     csvWriter = csv.writer(outfile, delimiter=',',quotechar='"')
     for row in CSVText:
         csvWriter.writerow(row)
