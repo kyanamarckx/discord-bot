@@ -1,0 +1,28 @@
+{
+  "name": "weather",
+  "version": "1.0.0",
+  "description": "",
+  "main": "source/bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyanamarckx/discord-bot.git"
+  },
+  "keywords": [],
+  "author": "kiejaana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kyanamarckx/discord-bot/issues"
+  },
+  "homepage": "https://github.com/kyanamarckx/discord-bot#readme",
+  "dependencies": {
+    "@discordjs/rest": "^1.7.1",
+    "chalk": "^4.1.2",
+    "discord-api-types": "^0.37.47",
+    "discord.js": "^14.11.0",
+    "dotenv": "^16.3.1"
+  }
+}
