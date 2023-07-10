@@ -6,13 +6,14 @@ import("node-fetch");
 
 // Variables
 const csvPath = 'C:\\Users\\kyana\\OneDrive - Hogeschool Gent\\Documenten\\GitHub\\weather\\data\\weather.csv';
-const selectedColumns = ['name', 'datetime', 'temp'];
+const selectedColumns = ['name', 'datetime', 'tempmax'];
+const location = 'Cotignac';
 
 
 // Functions
 // Fetch the weather from the API and save it to a CSV file
 async function getWeather() {
-  fetch('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Aalst?unitGroup=metric&include=days&key=QPC4KTE9Q544W9S65UMYUN9R8&contentType=csv')
+  fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=metric&include=days&key=QPC4KTE9Q544W9S65UMYUN9R8&contentType=csv`)
     .then(response => {
       if (response.status !== 200) {
         console.log('Unexpected Status code:', response.status);
@@ -83,7 +84,10 @@ async function formatData(data) {
   data = JSON.parse(data);
   const columns = Object.keys(data[0]);
   const formattedOutput = data.map(entry => {
-    return columns.map(column => `**${column}**: ${entry[column]}`).join(', ');
+    return columns
+    .filter(column => column !== 'name')
+    .map(column => `**${column}**: ${entry[column]}`)
+    .join(', ');
   }).join('\n');
   return formattedOutput;
 }
@@ -100,9 +104,9 @@ module.exports = {
         const data = await getWeatherAndData();
         const formattedData = await formatData(data);
         const newData = JSON.parse(data);
-        const location = newData[0].name;
+        const loc = newData[0].name;
 
-        const newMessage = `Weather in **${location}**: \n${formattedData}`;
+        const newMessage = `Weather in __*${loc}*__: \n${formattedData}`;
         await interaction.editReply(newMessage);
         console.log(`Command "${this.data.name}" has been executed by ${interaction.user.username} in #${interaction.channel.name} on ${interaction.guild.name}🎉`);
     }
