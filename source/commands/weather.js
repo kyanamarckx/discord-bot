@@ -64,7 +64,7 @@ async function getDataFromCSV(csvFilePath, columns) {
 // Combine the two functions above to get the weather and the data
 async function getWeatherAndData() {
   await getWeather();
-  await delay(2500)
+  await delay(1500)
   const data = await getDataFromCSV(csvPath, selectedColumns).then(data => {
     // return the data correctly and readable
     console.log(data);
@@ -78,6 +78,16 @@ async function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+// Filter/format the data
+async function formatData(data) {
+  data = JSON.parse(data);
+  const columns = Object.keys(data[0]);
+  const formattedOutput = data.map(entry => {
+    return columns.map(column => `**${column}**: ${entry[column]}`).join(', ');
+  }).join('\n');
+  return formattedOutput;
+}
+
 
 // The response of the bot in chat
 module.exports = {
@@ -88,8 +98,11 @@ module.exports = {
       // use the getWeather function here
         const message = await interaction.deferReply({ fetchReply: true });
         const data = await getWeatherAndData();
+        const formattedData = await formatData(data);
+        const newData = JSON.parse(data);
+        const location = newData[0].name;
 
-        const newMessage = `Weather for **${data.name}**: \n${data}`;
+        const newMessage = `Weather in **${location}**: \n${formattedData}`;
         await interaction.editReply(newMessage);
         console.log(`Command "${this.data.name}" has been executed by ${interaction.user.username} in #${interaction.channel.name} on ${interaction.guild.name}🎉`);
     }
