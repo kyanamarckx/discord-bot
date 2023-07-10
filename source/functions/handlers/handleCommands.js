@@ -1,8 +1,10 @@
+// Imports
 const fs = require('fs');
 require('dotenv').config();
 const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord-api-types/v9');
 
+// Create the handleCommands function
 module.exports = (client) => {
   client.handleCommands = async () => {
     const commandFiles = fs.readdirSync('./source/commands').filter(file => file.endsWith('.js'));

@@ -1,5 +1,7 @@
+// Import
 const fs = require('fs');
 
+// Create the handleEvents function
 module.exports = (client) => {
   client.handleEvents = async () => {
     const eventFolders = fs.readdirSync('./source/events');

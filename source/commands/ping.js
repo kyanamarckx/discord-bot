@@ -1,5 +1,7 @@
+// Import
 const { SlashCommandBuilder } = require('discord.js');
 
+// The response of the bot in chat
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('ping')

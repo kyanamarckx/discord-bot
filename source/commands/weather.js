@@ -1,33 +1,16 @@
+// Imports
 const { SlashCommandBuilder } = require('discord.js');
 const fs = require('fs');
 const csv = require('csv-parser');
 import("node-fetch");
 
-// function selectColumns(csvFilePath, columns) {
-//   const selectedData = [];
-
-//   fs.createReadStream(csvFilePath)
-//     .pipe(csv())
-//     .on('data', (row) => {
-//       const selectedRow = {};
-//       columns.forEach(column => {
-//         selectedRow[column] = row[column];
-//       });
-//       selectedData.push(selectedRow);
-//     })
-//     .on('end', () => {
-//       console.log('Data parsing complete');
-//       // console.log(selectedData);
-//     });
-
-//   return selectedData;
-// }
-
-
+// Variables
 const csvPath = 'C:\\Users\\kyana\\OneDrive - Hogeschool Gent\\Documenten\\GitHub\\weather\\data\\weather.csv';
 const selectedColumns = ['name', 'datetime', 'temp'];
 
 
+// Functions
+// Fetch the weather from the API and save it to a CSV file
 async function getWeather() {
   fetch('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Aalst?unitGroup=metric&include=days&key=QPC4KTE9Q544W9S65UMYUN9R8&contentType=csv')
     .then(response => {
@@ -54,6 +37,7 @@ async function getWeather() {
     });
 }
 
+// Get the data from the CSV file
 async function getDataFromCSV(csvFilePath, columns) {
   return new Promise((resolve, reject) => {
     const results = [];
@@ -77,6 +61,7 @@ async function getDataFromCSV(csvFilePath, columns) {
   });
 }
 
+// Combine the two functions above to get the weather and the data
 async function getWeatherAndData() {
   await getWeather();
   await delay(2500)
@@ -88,12 +73,13 @@ async function getWeatherAndData() {
   return data;
 }
 
+// Delay function
 async function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 
-
+// The response of the bot in chat
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('weather')
