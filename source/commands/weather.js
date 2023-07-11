@@ -90,8 +90,10 @@ async function getWeather(location, forecast) {
 
 // Get the data from the CSV file
 async function getDataFromCSV(csvFilePath, columns, forecast) {
-  if (forecast === '24-hour' || forecast === 'current') {
+  if (forecast === 'current') {
     columns = ['name', 'datetime', 'temp', 'uvindex', 'icon'];
+  } else if (forecast === '24-hour') {
+    columns = ['name', 'datetime', 'temp', 'conditions'];
   } else {
     columns
   }
@@ -139,32 +141,83 @@ async function delay(ms) {
 async function formatData(data, forecast) {
   data = JSON.parse(data);
   const columns = Object.keys(data[0]);
+  const dateColumn = 'datetime';
+  const dateFormatNormal = { year: 'numeric', month: 'numeric', day: 'numeric' };
+  const dateFormatHour = { hour: 'numeric', minute: 'numeric' };
+
+  // columns.forEach(column => {
+  //   switch (column) {
+  //     case 'datetime':
+  //       column = 'Date';
+  //       break;
+  //     case 'tempmax':
+  //       column = 'Temperature';
+  //       break;
+  //     case 'uvindex':
+  //       column = 'UV';
+  //       break;
+  //     case 'icon':
+  //       column = 'Description';
+  //       break;
+  //     case 'temp':
+  //       column = 'Temperature';
+  //       break;
+  //     case 'conditions':
+  //       column = 'Conditions';
+  //       break;
+  //     default:
+  //       break;
+  //   }
+  //   return column;
+  // });
   let formattedOutput = data.map(entry => {
-    return columns
-    .filter(column => column !== 'name')
-    .map(column => `**${column}**: ${entry[column]}`)
-    .join(', ');
-  }).join('\n');
-  // map the datetime to a readable format
-  // formattedOutput = formattedOutput.map(datetime => {
-  //   return datetime.spli
-  // })
+    const formattedEntry = {};
+    columns
+      .filter(column => column !== 'name')
+      .forEach(column => {
+        formattedEntry[column] = entry[column];
+      });
+    return formattedEntry;
+  });
 
   if (forecast === '24-hour') {
-    // formattedOutput = formattedOutput.replace(/temp/g, 'temperature');
-    // formattedOutput = formattedOutput.replace(/uvindex/g, 'UV index');
-    // formattedOutput = formattedOutput.replace(/icon/g, 'weather icon');
-    const time = new Date();
-    const next24hours = time.setHours(time.getHours() + 24);;
-    formattedOutput = formattedOutput.split('\n').filter(entry => {
-      const entryTime = entry.split(', ')[0].split('T')[1].split(':')[0];
-      return entryTime <= next24hours;
-    }
-    ).join('\n');
+    const currentTime = new Date();
+    const next24hours = new Date(currentTime.getTime() + 24 * 60 * 60 * 1000);
+
+    formattedOutput = formattedOutput.filter(entry => {
+      const entryDateTime = new Date(entry.datetime);
+      return entryDateTime >= currentTime && entryDateTime <= next24hours;
+    });
   }
+
+  let i = 1;
+  formattedOutput = formattedOutput.map((entry) => {
+    const formattedEntry = Object.entries(entry).map(([key, value]) => {
+      if (key === dateColumn) {
+        const date = new Date(value);
+        if (forecast === '24-hour') {
+          // only show only the hour if the forecast is for the next 24 hours
+          return `*${date.toLocaleTimeString('en-US', dateFormatHour)}*`;
+        } else {
+          return `*${date.toLocaleDateString('en-US', dateFormatNormal)}*`;
+        }
+      } else if (key === 'icon') {
+        if (typeof value === 'string') {
+          return `**${key}**: ${value.split('-').join(' ')}`;
+        }
+      }
+      return `**${key}**: ${value}`;
+    });
+
+    formattedEntry.unshift(`**${i++}.** ${formattedEntry.shift()}`);
+    return formattedEntry.join(', ');
+  }).join('\n');
+
+
 
   return formattedOutput;
 }
+
 
 
 // The response of the bot in chat
@@ -182,9 +235,10 @@ module.exports = {
         const data = await getWeatherAndData(location, forecast);
         const formattedData = await formatData(data, forecast);
         const newData = JSON.parse(data);
-        const loc = newData[0].name;
+        let loc = newData[0].name;
+        loc = loc.toUpperCase();
 
-        const newMessage = `Weather in __*${loc}*__: \n${formattedData}`;
+        const newMessage = `Weather in ***${loc}***: \n${formattedData}`;
         await interaction.editReply(newMessage);
         console.log(`Command "${this.data.name}" has been executed by ${interaction.user.username} in #${interaction.channel.name} on ${interaction.guild.name}🎉`);
     }
