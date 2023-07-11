@@ -7,7 +7,6 @@ import("node-fetch");
 // Variables
 const csvPath = 'C:\\Users\\kyana\\OneDrive - Hogeschool Gent\\Documenten\\GitHub\\weather\\data\\weather.csv';
 let selectedColumns = ['name', 'datetime', 'tempmax', 'uvindex', 'icon'];
-// const location = 'Cotignac';
 
 
 // Functions
@@ -145,31 +144,6 @@ async function formatData(data, forecast) {
   const dateFormatNormal = { year: 'numeric', month: 'numeric', day: 'numeric' };
   const dateFormatHour = { hour: 'numeric', minute: 'numeric' };
 
-  // columns.forEach(column => {
-  //   switch (column) {
-  //     case 'datetime':
-  //       column = 'Date';
-  //       break;
-  //     case 'tempmax':
-  //       column = 'Temperature';
-  //       break;
-  //     case 'uvindex':
-  //       column = 'UV';
-  //       break;
-  //     case 'icon':
-  //       column = 'Description';
-  //       break;
-  //     case 'temp':
-  //       column = 'Temperature';
-  //       break;
-  //     case 'conditions':
-  //       column = 'Conditions';
-  //       break;
-  //     default:
-  //       break;
-  //   }
-  //   return column;
-  // });
   let formattedOutput = data.map(entry => {
     const formattedEntry = {};
     columns
@@ -212,9 +186,6 @@ async function formatData(data, forecast) {
     formattedEntry.unshift(`**${i++}.** ${formattedEntry.shift()}`);
     return formattedEntry.join(', ');
   }).join('\n');
-
-
-
   return formattedOutput;
 }
 
