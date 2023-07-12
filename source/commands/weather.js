@@ -5,7 +5,7 @@ const csv = require('csv-parser');
 import("node-fetch");
 
 // Variables
-const csvPath = 'C:\\Users\\kyana\\OneDrive - Hogeschool Gent\\Documenten\\GitHub\\weather\\data\\weather.csv';
+const csvPath = 'C:\\Users\\kyana\\OneDrive - Hogeschool Gent\\Documenten\\GitHub\\mochi bot\\data\\weather.csv';
 let selectedColumns = ['name', 'datetime', 'tempmax', 'uvindex', 'icon'];
 
 
@@ -24,7 +24,7 @@ async function getWeather(location, forecast) {
         if (!csvData) {
           console.error('CSV data is empty.');
         }
-        fs.writeFile('C:\\Users\\kyana\\OneDrive - Hogeschool Gent\\Documenten\\GitHub\\weather\\data\\weather.csv', csvData, err => {
+        fs.writeFile('C:\\Users\\kyana\\OneDrive - Hogeschool Gent\\Documenten\\GitHub\\mochi bot\\data\\weather.csv', csvData, err => {
           if (err) {
             console.error(err);
           }
@@ -48,7 +48,7 @@ async function getWeather(location, forecast) {
         if (!csvData) {
           console.error('CSV data is empty.');
         }
-        fs.writeFile('C:\\Users\\kyana\\OneDrive - Hogeschool Gent\\Documenten\\GitHub\\weather\\data\\weather.csv', csvData, err => {
+        fs.writeFile('C:\\Users\\kyana\\OneDrive - Hogeschool Gent\\Documenten\\GitHub\\mochi bot\\data\\weather.csv', csvData, err => {
           if (err) {
             console.error(err);
           }
@@ -72,7 +72,7 @@ async function getWeather(location, forecast) {
         if (!csvData) {
           console.error('CSV data is empty.');
         }
-        fs.writeFile('C:\\Users\\kyana\\OneDrive - Hogeschool Gent\\Documenten\\GitHub\\weather\\data\\weather.csv', csvData, err => {
+        fs.writeFile('C:\\Users\\kyana\\OneDrive - Hogeschool Gent\\Documenten\\GitHub\\mochi bot\\data\\weather.csv', csvData, err => {
           if (err) {
             console.error(err);
           }
@@ -196,7 +196,7 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('weather')
         .setDescription("Returns the weather!")
-        .addStringOption(option => option.setName('location').setDescription('The location you want to know the weather of').setRequired(true))
+        .addStringOption(option => option.setName('location').setDescription('Which location do you want to know the weather of?').setRequired(true))
         .addStringOption(option => option.setName('forecast').setDescription('Which kind of forecast would you like?').setRequired(true).addChoices({name: 'Next 15 days', value: '15-day'}, {name: 'Next 24 hours', value: '24-hour'}, {name: 'Current weather', value: 'current'})),
     async execute(interaction) {
       // use the getWeather function here

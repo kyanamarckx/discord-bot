@@ -1,7 +1,7 @@
 // Imports
 require('dotenv').config();
-const { token } = process.env;
-const { Client, Collection, GatewayIntentBits } = require('discord.js');
+const  token = process.env.TOKEN;
+const { Client, Collection, GatewayIntentBits, ActivityType } = require('discord.js');
 const fs = require('fs');
 
 // Create and configure the client
@@ -23,3 +23,16 @@ for (const folder of functionFolders) {
 client.handleEvents();
 client.handleCommands();
 client.login(token);
+client.once('ready', () => {
+  console.log('Editing status ...');
+  client.user.setPresence({
+    status: 'online',
+    activities: [{
+      name: "Mochi's cute face🤎",
+      // url: 'https://youtu.be/O5PQxNX8OAY',
+      type: ActivityType.Watching
+      // emoji: '🤎',
+      
+    }]
+  });
+});
