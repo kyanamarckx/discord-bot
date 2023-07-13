@@ -14,7 +14,7 @@ module.exports = (client) => {
       const command = require(`C:\\Users\\kyana\\OneDrive - Hogeschool Gent\\Documenten\\GitHub\\mochi bot\\source\\commands\\${file}`);
       commands.set(command.data.name, command);
       commandArray.push(command.data.toJSON());
-      console.log(`Loaded command "${command.data.name}" has passed through the command handler🎉`)
+      console.log(`Loaded command "${command.data.name}" has passed through the command handler🤖`)
     }
 
     const clientID = '1127682126389706864';
@@ -22,14 +22,14 @@ module.exports = (client) => {
     const rest = new REST({ version: '9' }).setToken(process.env.TOKEN);
 
     try {
-      console.log('Started refreshing application (/) commands.');
+      console.log('Started refreshing application (/) commands🔄');
 
       await rest.put(
         Routes.applicationGuildCommands(clientID, guildID),
         { body: client.commandArray },
       );
 
-      console.log('Successfully reloaded application (/) commands.');
+      console.log('Successfully reloaded application (/) commands✅');
     } catch (error) {
       console.error(error);
     }

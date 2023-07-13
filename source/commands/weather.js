@@ -211,6 +211,6 @@ module.exports = {
 
         const newMessage = `Weather in ***${loc}***: \n${formattedData}`;
         await interaction.editReply(newMessage);
-        console.log(`Command "${this.data.name}" has been executed by ${interaction.user.username} in #${interaction.channel.name} on ${interaction.guild.name}🎉`);
+        console.log(`Command "${this.data.name}" has been executed by ${interaction.user.username} in #${interaction.channel.name} on ${interaction.guild.name}⛅`);
     }
 }

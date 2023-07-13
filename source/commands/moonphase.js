@@ -93,10 +93,23 @@ async function saveAndGetBodies(path) {
 module.exports = {
   data: new SlashCommandBuilder()
     .setName('moonphase')
-    .setDescription('Get the current moon phase.'),
+    .setDescription('Get the current moon phase.')
+    .addStringOption(option => option
+      .setName('function')
+      .setDescription('Select which functionality u want to use:')
+      .setRequired(true)
+      .addChoices({
+        name: 'Get the available bodies in the universe', value: 'bodies',
+      })),
   async execute(interaction) {
     await interaction.deferReply({ fetchReply: true });
+    const functionChoice = interaction.options.getString('function');
+
+    if (functionChoice === 'bodies') {
     const body = await saveAndGetBodies(jsonPath);
     await interaction.editReply(`The available bodies are: \n${body}`);
+    }
+
+    console.log(`Command "${this.data.name}" has been executed by ${interaction.user.username} in #${interaction.channel.name} on ${interaction.guild.name}🌘`);
   }
 }

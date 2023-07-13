@@ -11,6 +11,6 @@ module.exports = {
 
         const newMessage = `Client ping: ${message.createdTimestamp - interaction.createdTimestamp}ms \n API Latency: ${Math.round(client.ws.ping)}ms`;
         await interaction.editReply(newMessage);
-        console.log(`Command "${this.data.name}" has been executed by ${interaction.user.username} in #${interaction.channel.name} on ${interaction.guild.name}🎉`);
+        console.log(`Command "${this.data.name}" has been executed by ${interaction.user.username} in #${interaction.channel.name} on ${interaction.guild.name}💡`);
     }
 }

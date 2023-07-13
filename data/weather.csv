@@ -1,16 +1,49 @@
-name,datetime,tempmax,tempmin,temp,feelslikemax,feelslikemin,feelslike,dew,humidity,precip,precipprob,precipcover,preciptype,snow,snowdepth,windgust,windspeed,winddir,sealevelpressure,cloudcover,visibility,solarradiation,solarenergy,uvindex,severerisk,sunrise,sunset,moonphase,conditions,description,icon,stations
-"Brussel, België",2023-07-11,29,15.6,22.9,28.5,15.6,22.8,14,59.7,0.6,95.2,8.33,rain,0,0,46.8,23.5,221.8,1013.1,66.6,10.6,288.7,24.9,9,10,2023-07-11T05:41:33,2023-07-11T21:54:05,0.78,"Rain, Partially cloudy",Partly cloudy throughout the day with late afternoon rain.,rain,"EBBE,EBCV,EBAW,EBCI,D0152,EBBR"
-"Brussel, België",2023-07-12,22.9,15.6,19,22.9,15.6,19,11.5,64.6,2.7,95.2,16.67,rain,0,0,49.7,19.4,246.1,1012.3,65.7,22.8,282.1,24.4,9,10,2023-07-12T05:42:35,2023-07-12T21:53:17,0.81,"Rain, Partially cloudy",Partly cloudy throughout the day with early morning rain.,rain,
-"Brussel, België",2023-07-13,22.9,14.3,18.2,22.9,14.3,18.2,11.2,65.5,0.1,14.3,4.17,rain,0,0,55.1,19.1,242.3,1016.5,69.2,24.1,157.3,13.5,6,10,2023-07-13T05:43:39,2023-07-13T21:52:27,0.85,Partially cloudy,Partly cloudy throughout the day.,partly-cloudy-day,
-"Brussel, België",2023-07-14,24.3,12.5,18.1,24.3,12.5,18.1,10.9,64.5,2.5,9.5,8.33,rain,0,0,34.6,13.7,181.5,1013.9,86.2,24.1,196.1,17.1,5,10,2023-07-14T05:44:45,2023-07-14T21:51:33,0.88,Partially cloudy,Partly cloudy throughout the day.,partly-cloudy-day,
-"Brussel, België",2023-07-15,23.8,18.2,20.8,23.8,18.2,20.8,14.1,66.2,0.1,23.8,4.17,rain,0,0,58.7,20.9,206.5,1006.6,89.6,23.9,118.5,10.4,6,10,2023-07-15T05:45:52,2023-07-15T21:50:37,0.92,Partially cloudy,Partly cloudy throughout the day.,partly-cloudy-day,
-"Brussel, België",2023-07-16,24.7,15.3,20,24.7,15.3,20,9.3,51.4,0,19,0,,0,0,46.1,30.6,238.1,1011.4,62,24.1,294.3,25.3,8,10,2023-07-16T05:47:01,2023-07-16T21:49:39,0.95,Partially cloudy,Partly cloudy throughout the day.,partly-cloudy-day,
-"Brussel, België",2023-07-17,25.1,14.5,19.1,25.1,14.5,19.1,8.3,51.7,0,0,0,,0,0,33.5,21.2,248.8,1015.6,48.1,24.1,312.7,26.9,8,10,2023-07-17T05:48:12,2023-07-17T21:48:37,0,Partially cloudy,Partly cloudy throughout the day.,partly-cloudy-day,
-"Brussel, België",2023-07-18,24.7,13,18.6,24.7,13,18.6,8.5,55.2,0,4.8,0,,0,0,27,19.8,276.3,1018.2,45.3,24.1,305.5,26.5,8,10,2023-07-18T05:49:24,2023-07-18T21:47:34,0.02,Partially cloudy,Partly cloudy throughout the day.,partly-cloudy-day,
-"Brussel, België",2023-07-19,24.7,12.7,18.6,24.7,12.7,18.6,8,52.1,0,4.8,0,,0,0,19.1,18.4,328.7,1019.3,32.8,24.1,249.3,21.5,6,10,2023-07-19T05:50:38,2023-07-19T21:46:27,0.05,Partially cloudy,Becoming cloudy in the afternoon.,partly-cloudy-day,
-"Brussel, België",2023-07-20,28.9,13,20.7,27.4,13,20.5,6.4,41.4,0,23.8,0,,0,0,22.3,15.1,250.4,1017,35,24.1,326.7,28.3,8,10,2023-07-20T05:51:53,2023-07-20T21:45:19,0.09,Partially cloudy,Partly cloudy throughout the day.,partly-cloudy-day,
-"Brussel, België",2023-07-21,26.3,13.6,20.2,26.3,13.6,20.2,11,58,0,23.8,0,,0,0,26.6,20.5,252.6,1012.1,72.9,24.1,267.3,23.1,8,10,2023-07-21T05:53:09,2023-07-21T21:44:08,0.12,Partially cloudy,Partly cloudy throughout the day.,partly-cloudy-day,
-"Brussel, België",2023-07-22,24.2,14.8,17.5,24.2,14.8,17.5,11.8,72.3,4.8,33.3,20.83,rain,0,0,47.2,27.4,237.5,1006.7,89.3,22.5,131.9,11.2,6,10,2023-07-22T05:54:27,2023-07-22T21:42:54,0.15,Partially cloudy,Partly cloudy throughout the day.,partly-cloudy-day,
-"Brussel, België",2023-07-23,19.9,11.7,16.5,19.9,11.7,16.5,8.4,60.9,0.3,42.9,12.5,rain,0,0,34.6,23,256.9,1012.3,61,24.1,144.2,12.3,5,10,2023-07-23T05:55:46,2023-07-23T21:41:39,0.19,Partially cloudy,Partly cloudy throughout the day.,partly-cloudy-day,
-"Brussel, België",2023-07-24,19.4,13.8,16.1,19.4,13.8,16.1,11.9,76.3,5.1,38.1,29.17,rain,0,0,33.5,23,257.7,1012.8,79.6,21.4,152.2,13.3,5,10,2023-07-24T05:57:06,2023-07-24T21:40:21,0.22,Partially cloudy,Partly cloudy throughout the day.,partly-cloudy-day,
-"Brussel, België",2023-07-25,20.2,12.2,14.6,20.2,12.2,14.6,12.5,88,5.5,38.1,20.83,rain,0,0,27.4,19.4,246.1,1012.4,94.7,21.1,101.9,8.8,6,10,2023-07-25T05:58:27,2023-07-25T21:39:01,0.25,Overcast,Cloudy skies throughout the day.,cloudy,
+name,datetime,temp,feelslike,dew,humidity,precip,precipprob,preciptype,snow,snowdepth,windgust,windspeed,winddir,sealevelpressure,cloudcover,visibility,solarradiation,solarenergy,uvindex,severerisk,conditions,icon,stations
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-13T00:00:00,25.1,25.1,20.9,77.54,0,0,,0,0,12.6,3,356,1013.1,52,10,0,0,0,60,Partially cloudy,partly-cloudy-night,"LFMD,E8668,LFMC,LFML,LFTH"
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-13T01:00:00,25.1,25.1,20.7,76.74,0,0,,0,0,14.8,4.9,251,1013,88,10,0,0,0,60,Partially cloudy,partly-cloudy-night,"LFMD,E8668,LFMC,LFML,LFTH"
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-13T02:00:00,25,25,20.6,76.83,0,0,,0,0,20.9,8.5,228,1012.8,88,10,0,0,0,8,Partially cloudy,partly-cloudy-night,"LFMD,E8668,LFMC,LFML,LFTH"
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-13T03:00:00,24.2,24.2,21.3,83.54,0,0,,0,0,24.1,7.7,220,1012.1,88,10,0,0,0,8,Partially cloudy,partly-cloudy-night,"LFMD,E8668,LFMC,LFML,LFTH"
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-13T04:00:00,24.2,24.2,21.1,82.64,0,0,,0,0,24.1,4.1,34,1012.1,88,10,0,0,0,8,Partially cloudy,partly-cloudy-night,"LFMD,E8668,LFMC,LFML,LFTH"
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-13T05:00:00,23.8,23.8,20.4,81.19,0,0,,0,0,19.1,7.4,277,1012.8,88,10,0,0,0,8,Partially cloudy,partly-cloudy-night,"LFMD,E8668,LFMC,LFML,LFTH"
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-13T06:00:00,23.8,23.8,20.3,80.71,0,0,,0,0,19.4,9.9,248,1012.8,88,10,0,0,0,15,Partially cloudy,partly-cloudy-night,"LFMD,E8668,LFMC,LFML,LFTH"
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-13T07:00:00,23.7,23.7,19.6,77.84,0,0,,0,0,25.9,11.4,289,1013,88,10,1,0,0,5,Partially cloudy,partly-cloudy-day,"LFMD,E8668,LFMC,LFML,LFTH"
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-13T08:00:00,25.2,25.2,18.6,66.67,0,0,,0,0,31.7,13.3,267,1013.9,25,10,26,0.1,0,8,Partially cloudy,partly-cloudy-day,"LFMD,E8668,LFMC,LFML,LFTH"
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-13T09:00:00,27.3,28.2,18.3,57.94,0,0,,0,0,38.9,12.8,277,1014,0,10,99,0.4,1,8,Clear,clear-day,"LFMD,E8668,LFMC,LFML,LFTH"
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-13T10:00:00,28.9,29.7,17.8,51.09,0,0,,0,0,51.8,17.8,257,1014,0,10,187,0.7,2,3,Clear,clear-day,"LFMD,E8668,LFMC,LFML,LFTH"
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-13T11:00:00,30.2,30.7,17,45.13,0,0,,0,0,44.3,21.1,266,1013.8,0,10,294,1.1,3,10,Clear,clear-day,"LFMD,E8668,LFMC,LFML,LFTH"
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-13T12:00:00,31.7,32,16.6,40.37,0,0,,0,0,45.7,27.9,267,1014,0,10,397,1.4,4,10,Clear,clear-day,"LFMD,E8668,LFMC,LFML,LFTH"
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-13T13:00:00,33.2,32.9,15.2,33.93,0,0,,0,0,50.4,28.7,288,1013,0,10,473,1.7,5,10,Clear,clear-day,"LFMD,E8668,LFMC,LFML,LFTH"
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-13T14:00:00,32.8,32.5,15.1,34.42,0,0,,0,0,53.3,34.1,257,1013.1,0,10,483,1.7,5,10,Clear,clear-day,"LFMD,E8668,LFML,LFTH"
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-13T15:00:00,34.5,33.6,13.4,28.09,0,0,,0,0,56.5,27.2,281,1012.9,0,10,464,1.7,5,10,Clear,clear-day,"LFMD,E8668,LFMC,LFML,LFTH"
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-13T16:00:00,34.4,33.9,14.5,30.18,0,0,,0,0,37.1,28.1,286,1013,75.8,10,411,1.5,4,10,Partially cloudy,partly-cloudy-day,"LFMD,E8668,LFMC,LFML,LFTH"
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-13T17:00:00,34.4,33.5,13.4,28.35,0,0,,0,0,60.5,27.2,282,1013,25,9.7,291,1,3,10,Partially cloudy,partly-cloudy-day,"LFMD,E8668,LFMC,LFML,LFTH"
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-13T18:00:00,32.9,31.5,11.7,27.47,0,0,,0,0,60.5,27.9,289,1013,100,9.7,157,0.6,2,10,Overcast,cloudy,"LFMD,E8668,LFMC,LFML,LFTH"
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-13T19:00:00,31.2,29.7,9.9,26.88,0,0,,0,0,55.4,29.6,317,1013,100,9.9,60,0.2,1,10,Overcast,cloudy,"LFMD,E8668,LFMC,LFML,LFTH"
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-13T20:00:00,30.2,28.8,9.7,28.06,0,0,,0,0,48.6,23.2,295,1013.1,39.3,10,22,0.1,0,10,Partially cloudy,partly-cloudy-day,"LFMD,E8668,LFMC,LFML,LFTH"
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-13T21:00:00,26.5,26.5,5.5,26.1,0,0,,0,0,39.6,15.5,294.1,1014,67.3,24.1,59,0.2,1,10,Partially cloudy,partly-cloudy-day,
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-13T22:00:00,24.1,24.1,6.6,32.48,0,0,,0,0,31,11.2,287.7,1015,0,24.1,1,0,0,10,Clear,clear-night,
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-13T23:00:00,21.9,21.9,6.5,36.85,0,0,,0,0,23.4,7.9,281.9,1015,0,24.1,0,0,0,10,Clear,clear-night,
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-14T00:00:00,19.9,19.9,6.4,41.39,0,0,,0,0,15.8,6.1,270.2,1016,0,24.1,0,0,0,10,Clear,clear-night,
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-14T01:00:00,18.5,18.5,6.1,44.24,0,0,,0,0,15.1,7.6,254.5,1016,0,24.1,0,0,0,10,Clear,clear-night,
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-14T02:00:00,17.3,17.3,5.8,46.73,0,0,,0,0,15.5,6.5,252.8,1016,0,24.1,0,0,0,10,Clear,clear-night,
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-14T03:00:00,15.7,15.7,6.2,53.19,0,0,,0,0,13.7,5,249.9,1016,0,24.1,0,0,0,10,Clear,clear-night,
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-14T04:00:00,14.4,14.4,6.6,59.45,0,0,,0,0,11.2,5.4,250.7,1016,0,24.1,0,0,0,10,Clear,clear-night,
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-14T05:00:00,13.5,13.5,6.6,63.02,0,0,,0,0,11.9,6.1,244.1,1016,0,24.1,0,0,0,10,Clear,clear-night,
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-14T06:00:00,13.2,13.2,6.4,63.39,0,0,,0,0,12.2,6.1,245.5,1017,7.6,24.1,0,0,0,10,Clear,clear-night,
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-14T07:00:00,13.7,13.7,6.6,62.21,0,0,,0,0,12.6,6.1,250.5,1017,0,24.1,26,0.1,0,10,Clear,clear-day,
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-14T08:00:00,18,18,8.4,53.43,0,0,,0,0,12.6,5,255.8,1017,0,24.1,163,0.6,2,10,Clear,clear-day,
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-14T09:00:00,22.8,22.8,8.7,40.54,0,0,,0,0,12.6,4.3,270.3,1017,0,24.1,337,1.2,3,10,Clear,clear-day,
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-14T10:00:00,26.8,26.4,9.1,32.8,0,0,,0,0,11.5,1.8,293.4,1016,0,24.1,524,1.9,5,10,Clear,clear-day,
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-14T11:00:00,29.9,28.2,6.6,23.1,0,0,,0,0,8.3,1.8,275,1016,0,24.1,687,2.5,7,10,Clear,clear-day,
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-14T12:00:00,32.1,30,6.2,19.82,0,0,,0,0,10.4,2.9,269.8,1016,0,24.1,816,2.9,8,10,Clear,clear-day,
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-14T13:00:00,33.9,31.7,7.2,19.19,0,0,,0,0,10.4,2.2,198,1016,0,24.1,898,3.2,9,10,Clear,clear-day,
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-14T14:00:00,34.3,32.1,6.9,18.38,0,0,,0,0,31,14,171.8,1015,3.9,24.1,934,3.4,9,10,Clear,clear-day,
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-14T15:00:00,34,32.5,11.5,25.48,0,0,,0,0,35.6,15.5,163.2,1015,0,24.1,913,3.3,9,10,Clear,clear-day,
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-14T16:00:00,34.1,33,12.8,27.6,0,0,,0,0,36,16.9,164.6,1014,0.7,24.1,838,3,8,10,Clear,clear-day,
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-14T17:00:00,33.7,32.4,12.1,26.96,0,0,,0,0,36.4,16.6,178.3,1014,0,24.1,719,2.6,7,10,Clear,clear-day,
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-14T18:00:00,32.4,30.9,11.3,27.51,0,0,,0,0,35.6,16.2,184,1014,0,24.1,567,2,6,10,Clear,clear-day,
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-14T19:00:00,30.5,29.4,12.3,32.74,0,0,,0,0,34.6,14.4,175.9,1015,0,24.1,394,1.4,4,5,Clear,clear-day,
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-14T20:00:00,28.3,27.9,13.4,39.95,0,0,,0,0,30.6,12.6,170.9,1015,28.8,24.1,217,0.8,2,5,Partially cloudy,partly-cloudy-day,
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-14T21:00:00,26,26,14,47.54,0,0,,0,0,25.6,4.7,157.9,1015,12.2,24.1,61,0.2,1,10,Clear,clear-day,
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-14T22:00:00,23.5,23.5,14.6,57.39,0,0,,0,0,8.6,2.9,139.7,1016,81.4,24.1,1,0,0,10,Partially cloudy,partly-cloudy-night,
+"Cotignac, Provence-Alpes-Côte d'Azur, France",2023-07-14T23:00:00,21.7,21.7,14.6,64.01,0,0,,0,0,4,2.5,202.4,1016,73.4,24.1,0,0,0,10,Partially cloudy,partly-cloudy-night,

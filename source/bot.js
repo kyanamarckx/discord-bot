@@ -24,7 +24,7 @@ client.handleEvents();
 client.handleCommands();
 client.login(token);
 client.once('ready', () => {
-  console.log('Editing status ...');
+  console.log('Editing status⏳');
   client.user.setPresence({
     status: 'online',
     activities: [{
